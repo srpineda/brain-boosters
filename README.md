@@ -1,1 +1,1 @@
-# brain-workout
+# brain-boosters
