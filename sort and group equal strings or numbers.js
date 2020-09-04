@@ -52,3 +52,32 @@ const organizer = (arr => {
     }
     return answer;
 } ); 
+/*
+
+Other Version
+
+let organizer3 = type => arr => {
+    let newArr = [...arr].filter(e => typeof(e)===type).sort((a,b) => a-b); 
+    let ans = [];
+    while (newArr.length > 0) {
+        let lio = newArr.lastIndexOf(newArr[0]);
+        (lio) ? ans.push(newArr.splice(0,lio+1)) : ans.push(newArr.splice(0,1)[0]);
+    }
+    return ans;
+}
+
+let organizeMe = array => {
+    let num = organizer3("number")(array);
+    let str = organizer3("string")(array);
+
+    if (num.length > 0 && str.length > 0){
+        return [ num , str ];
+    } else if (str.length > 0){
+        return str;
+    } else {
+        return num;
+    }
+};
+
+organizeMe(array);
+*/
